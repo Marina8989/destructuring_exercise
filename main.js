@@ -124,8 +124,9 @@ arr[1] = temp;
 //     Destructuring
 // ‘Enhanced’ object assignment(same key / value shortcut)
 
+const raceResults = ([first, second, third, ...rest]) => ({ first, second, third, rest })
 
-raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre'])
+console.log(raceResults(['Tom', 'Margaret', 'Allison', 'David', 'Pierre']))
 
 /*
   {
