@@ -13,15 +13,15 @@ console.log(yearNeptuneDiscovered); // 1846
 //2. bject Destructuring 2
 //What does the following code return /print?
 
-let planetFacts = {
-    numPlanets: 8,
-    yearNeptuneDiscovered: 1846,
-    yearMarsDiscovered: 1659
-};
+// let planetFacts = {
+//     numPlanets: 8,
+//     yearNeptuneDiscovered: 1846,
+//     yearMarsDiscovered: 1659
+// };
 
-let { numPlanets, ...discoveryYears } = planetFacts;
+// let { numPlanets, ...discoveryYears } = planetFacts;
 
-console.log(discoveryYears); // {yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659}
+// console.log(discoveryYears); // {yearNeptuneDiscovered: 1846, yearMarsDiscovered: 1659}
 
 
 //3. Object Destructuring 3
@@ -57,8 +57,8 @@ let [raindrops, whiskers, ...aFewOfMyFavoriteThings] = [
     "Brown paper packages tied up with strings"
 ]
 
-console.log(raindrops); // Raindrops on roses
-console.log(whiskers); // whiskers on kittens
+console.log(raindrops); // "Raindrops on roses"
+console.log(whiskers); // "whiskers on kittens"
 console.log(aFewOfMyFavoriteThings); // ["Bright copper kettles", "warm woolen mittens","Brown paper packages tied up with strings"]
 
 
@@ -90,6 +90,11 @@ var b = obj.numbers.b;
 //ES2015 Object Destructuring
 /* Write an ES2015 Version */
 
+var {numbers: {a, b}} = obj;
+console.log(a);
+console.log(b);
+
+
 //ES5 Array Swap
 
 var arr = [1, 2];
@@ -100,6 +105,10 @@ arr[1] = temp;
 
 //ES2015 One - Line Array Swap with Destructuring
 /* Write an ES2015 Version */
+
+ [arr[0], arr[1]] = [arr[1], arr[0]];
+ 
+
 
 //raceResults()
 
